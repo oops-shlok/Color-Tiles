@@ -20,19 +20,3 @@ function startTimer(){
 }
 
 window.setInterval(startTimer,1000);
-
-
-//function movementMechanism(swap){
-  const swapTop= +swap-5;
-  const swapBottom=+swap+5;
-  const swapLeft=+swap-1;
-  const swapRight=+swap+1;
-
-  let check_grids= new Array(swapTop,swapBottom,swapLeft,swapRight);
-  check_grids.forEach((box)=>{
-    if (document.getElementById(String(box)).style.backgroundColor==""){
-      document.getElementById(String(box)).style.backgroundColor= document.getElementById(swap).style.backgroundColor;
-      document.getElementById(swap).style.backgroundColor="";
-    }
-  })
-//
