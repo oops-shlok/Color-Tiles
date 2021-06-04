@@ -31,19 +31,19 @@ function movementMechanism(swap){
   let swapDown=document.getElementById(String(+swap-5));
   let swapRight=document.getElementById(String(+swap+1));
   let swapLeft=document.getElementById(String(+swap-1));
-  if(swapUp.style.backgroundColor==""){
+  if(swapUp && swapUp.style.backgroundColor==""){
      swapUp.style.backgroundColor=swapElement.style.backgroundColor;
     swapElement.style.backgroundColor="";
   }
-  else if(swapDown.style.backgroundColor==""){
+  else if(swapDown && swapDown.style.backgroundColor==""){
      swapDown.style.backgroundColor=swapElement.style.backgroundColor;
     swapElement.style.backgroundColor="";
   }
-  else if(swapRight.style.backgroundColor==""){
+  else if(swapRight && swapRight.style.backgroundColor==""){
      swapRight.style.backgroundColor=swapElement.style.backgroundColor;
     swapElement.style.backgroundColor="";
   }
-  else if(swapLeft.style.backgroundColor==""){
+  else if(swapLeft && swapLeft.style.backgroundColor==""){
      swapLeft.style.backgroundColor=swapElement.style.backgroundColor;
     swapElement.style.backgroundColor="";
   }
