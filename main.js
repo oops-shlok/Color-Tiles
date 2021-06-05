@@ -31,7 +31,7 @@ function movementMechanism(swap){
   let swapDown=document.getElementById(String(+swap-5));
   let swapRight=document.getElementById(String(+swap+1));
   let swapLeft=document.getElementById(String(+swap-1));
-  if(swapUp && swapUp.style.backgroundColor==""){
+  if(swapUp  && swapUp.style.backgroundColor==""){
      swapUp.style.backgroundColor=swapElement.style.backgroundColor;
     swapElement.style.backgroundColor="";
   }
@@ -43,10 +43,9 @@ function movementMechanism(swap){
      swapRight.style.backgroundColor=swapElement.style.backgroundColor;
     swapElement.style.backgroundColor="";
   }
-  else if(swapLeft && swapLeft.style.backgroundColor==""){
+  else if(swapLeft &&swapLeft.style.backgroundColor==""){
      swapLeft.style.backgroundColor=swapElement.style.backgroundColor;
     swapElement.style.backgroundColor="";
   }
 
 }
-
