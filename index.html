@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <audio id="win" src="win.wav" preload="auto"></audio>
   <title>Color Tiles</title>
 </head>
 <style>
@@ -18,8 +20,8 @@
 
   #container{
     display:grid;
-    grid-template-columns: repeat(3, 30px);
-    grid-template-rows: repeat(3,30px);
+    grid-template-columns: repeat(3, 25px);
+    grid-template-rows: repeat(3,25px);
     grid-gap:2rem;
   }
 
@@ -49,7 +51,7 @@
   .item{
     background:#f4f4f4;
     border:#ccc solid 2px;
-    padding:1.5rem;
+    padding:1.2rem;
     font-weight: bold;
     text-align:center;
     border-radius:0.5rem;
@@ -57,15 +59,15 @@
 
   #grid{
     display:grid;
-    grid-template-columns: repeat(5,100px);
-    grid-template-rows: repeat(5,100px);
+    grid-template-columns: repeat(5,70px);
+    grid-template-rows: repeat(5,70px);
     padding-top:150px;
   }
 
   .box{
     background:#f4f4f4;
-    border:#ccc solid 7px;
-    padding:2rem;
+    border:#ccc solid 5px;
+    padding:1.5rem;
     font-weight: bold;
     text-align:center;
     border-radius: 0.2rem;
@@ -113,6 +115,7 @@
   }
 
   @media (max-width:768px){
+    
     #container{
     display:grid;
     grid-template-columns: repeat(3, 20px);
@@ -236,31 +239,31 @@
 
   <section>
     <div id="grid">
-      <div class="box" id='1' onclick="movementMechanism(this.id)"></div>
-      <div class="box" id='2' onclick="movementMechanism(this.id)"></div>
-      <div class="box" id='3' onclick="movementMechanism(this.id)"></div>
-      <div class="box" id='4' onclick="movementMechanism(this.id)"></div>
-      <div class="box" id='5' onclick="movementMechanism(this.id)"></div>
-      <div class="box" id='6' onclick="movementMechanism(this.id)"></div>
-      <div class="box" id='7' onclick="movementMechanism(this.id)"></div>
-      <div class="box" id='8' onclick="movementMechanism(this.id)"></div>
-      <div class="box" id='9' onclick="movementMechanism(this.id)"></div>
-      <div class="box" id='10' onclick="movementMechanism(this.id)"></div>
-      <div class="box" id='11' onclick="movementMechanism(this.id)"></div>
-      <div class="box" id='12' onclick="movementMechanism(this.id)"></div>
-      <div class="box" id='13' onclick="movementMechanism(this.id)"></div>
-      <div class="box" id='14' onclick="movementMechanism(this.id)"></div>
-      <div class="box" id='15' onclick="movementMechanism(this.id)"></div>
-      <div class="box" id='16' onclick="movementMechanism(this.id)"></div>
-      <div class="box" id='17' onclick="movementMechanism(this.id)"></div>
-      <div class="box" id='18' onclick="movementMechanism(this.id)"></div>
-      <div class="box" id='19' onclick="movementMechanism(this.id)"></div>
-      <div class="box" id='20' onclick="movementMechanism(this.id)"></div>
-      <div class="box" id='21' onclick="movementMechanism(this.id)"></div>
-      <div class="box" id='22' onclick="movementMechanism(this.id)"></div>
-      <div class="box" id='23' onclick="movementMechanism(this.id)"></div>
-      <div class="box" id='24' onclick="movementMechanism(this.id)"></div>
-      <div class="box" id='25' onclick="movementMechanism(this.id)"></div>
+      <div class="box" id='1' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='2' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='3' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='4' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='5' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='6' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='7' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='8' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='9' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='10' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='11' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='12' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='13' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='14' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='15' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='16' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='17' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='18' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='19' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='20' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='21' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='22' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='23' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='24' onclick="movementMechanism(this.id); answer(); points()"></div>
+      <div class="box" id='25' onclick="movementMechanism(this.id); answer(); points()"></div>
     </div>
   </section>
 
